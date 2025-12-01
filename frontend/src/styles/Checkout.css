@@ -1,0 +1,159 @@
+.checkout-page {
+  min-height: 80vh;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 100px;
+  z-index: 10;
+}
+
+.order-item-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+
+.order-items {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Custom scrollbar for order items */
+.order-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.order-items::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.order-items::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 3px;
+}
+
+.order-items::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+.order-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-totals {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+/* Form styling */
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+/* Accordion customization */
+.accordion-button:not(.collapsed) {
+  background-color: #667eea;
+  color: white;
+}
+
+.accordion-button:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Payment method cards */
+.payment-method-card {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-method-card:hover {
+  border-color: #667eea;
+  background-color: #f8f9ff;
+}
+
+.payment-method-card.selected {
+  border-color: #667eea;
+  background-color: #f0f2ff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sticky-top {
+    position: static;
+    margin-top: 2rem;
+  }
+  
+  .order-item-image {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .checkout-page .card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Loading state */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success card for order success page */
+.success-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Alert customization */
+.alert {
+  border: none;
+  border-radius: 8px;
+}
+
+.alert-info {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.alert-warning {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.alert-danger {
+  background-color: #ffebee;
+  color: #c62828;
+}

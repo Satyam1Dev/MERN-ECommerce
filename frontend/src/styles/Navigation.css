@@ -1,0 +1,179 @@
+/* Add this to your Navigation.css */
+.btn-primary-nav {
+  background: #667eea !important;
+  color: white !important;
+  border-radius: 10px !important;
+  margin: 0 0.3rem !important;
+  padding: 0.6rem 1.2rem !important;
+  border: none !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary-nav:hover {
+  background: #5a6fd8 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3) !important;
+  color: white !important;
+}
+.navbar-custom {
+  backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.75rem 0;
+}
+
+.navbar-custom.scrolled {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 0;
+}
+
+.brand-text {
+  color: #2d3748 !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.brand-text::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #667eea;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.brand-text:hover {
+  color: #667eea !important;
+  transform: translateY(-1px);
+}
+
+.brand-text:hover::before {
+  width: 100%;
+}
+
+.navbar-custom .nav-link {
+  font-weight: 600;
+  margin: 0 0.3rem;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  color: #4a5568 !important;
+  border: 1.5px solid transparent;
+}
+
+.navbar-custom .nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #667eea;
+  transition: left 0.3s ease;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+.navbar-custom .nav-link:hover {
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.15);
+  border-color: #667eea;
+}
+
+.navbar-custom .nav-link:hover::before {
+  left: 0;
+}
+
+.navbar-custom .nav-link.active {
+  background: #667eea;
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.25);
+  border-color: #667eea;
+}
+
+/* Add a subtle indicator for active link */
+.navbar-custom .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background: #667eea;
+  border-radius: 50%;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-3px);
+  }
+}
+
+/* Subtle focus states for accessibility */
+.navbar-custom .nav-link:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar-custom {
+    backdrop-filter: blur(15px);
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-custom .nav-link {
+    margin: 0.2rem 0;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .navbar-custom .nav-link.active::after {
+    bottom: -5px;
+    left: 20px;
+    transform: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .navbar-custom {
+    background: rgba(15, 23, 42, 0.92) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .navbar-custom.scrolled {
+    background: rgba(15, 23, 42, 0.98) !important;
+  }
+  
+  .brand-text {
+    color: #f7fafc !important;
+  }
+  
+  .navbar-custom .nav-link {
+    color: #cbd5e0 !important;
+  }
+}
